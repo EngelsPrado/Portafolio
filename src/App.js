@@ -1,12 +1,13 @@
 import React from "react";
 
 import Footer from "./Components/Footer";
-import SobreMi from "./Page/SobreMi";
+import Contacto from "./Page/Contacto";
+
 
 function App() {
   return (
     <>
-        <SobreMi/>
+        <Contacto/>
       <Footer/>
     </>
   );

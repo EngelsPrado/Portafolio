@@ -14,11 +14,6 @@ function App() {
       <Header />
       <Index></Index>
 
-      <SobreMi></SobreMi>
-      <Servicios></Servicios>
-      <Portafolio />
-      <Contacto></Contacto>
-
       <Footer />
     </>
   );

@@ -1,12 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+<<<<<<< HEAD
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,6 +19,9 @@ function App() {
         >
           Hola Mundo
         </a>
+=======
+        <h1>Engels Prado</h1>
+>>>>>>> 647b49be7d3eca30f217eb7e69f2393cb4def39f
       </header>
     </div>
   );

@@ -71,6 +71,7 @@ const Contacto = () => {
                                     className="instagram"
                                     href="https://www.instagram.com/layback.ar"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <i className="icon-instagram" />
                                 </a>
@@ -78,6 +79,7 @@ const Contacto = () => {
                                     className="facebook"
                                     href="https://www.facebook.com/mircocmartin"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <i className="icon-facebook" />
                                 </a>
@@ -85,6 +87,7 @@ const Contacto = () => {
                                     className="linkedin"
                                     href="https://www.linkedin.com/in/mirco-martin-a3b70670"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <i className="icon-linkedin-squared" />
                                 </a>
@@ -94,6 +97,7 @@ const Contacto = () => {
                     <div className="row mt-5" data-aos="fade-up">
                         <div className="col-12">
                             <iframe
+                                title="mapaUbicacion"
                                 className="map"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26783.87649454841!2d-60.64013315000001!3d-32.951417000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab1dc9b6d36f%3A0x97b9e9584d94d851!2sMonumento%20Hist%C3%B3rico%20Nacional%20a%20la%20Bandera!5e0!3m2!1ses!2sar!4v1593563745303!5m2!1ses!2sar"
                             />

@@ -46,7 +46,6 @@ const Contacto = () => {
                                     <textarea
                                         type="text"
                                         placeholder="Mensaje..."
-                                        defaultValue={''}
                                     />
                                 </div>
                                 <div className="form-group">
@@ -66,7 +65,7 @@ const Contacto = () => {
                                 crearemos un prototipo del sitio web de forma gratuita
                                 y le enviaremos un resultado.
                             </p>
-                            <section className="redes-general">
+                            <section className="redes-general d-flex justify-content-center justify-content-md-start">
                                 <a
                                     className="instagram"
                                     href="https://www.instagram.com/layback.ar"

@@ -5,7 +5,7 @@ import Typed from "react-typed";
 
 const Particle = () => {
   //Activo Typed Js
-  const textLines = [" DESIGNER", "UI/UX DEVELOPER"];
+  const textLines = ["React Developer", "UI/UX DEVELOPER", "FullStack"];
 
   return (
     <section className="parallax-particles">
@@ -13,7 +13,7 @@ const Particle = () => {
         params={{
           particles: {
             number: {
-              value: 100,
+              value: 50,
             },
             line_linked: {
               shadow: {
@@ -43,7 +43,7 @@ const Particle = () => {
         </div>
         <div className="detalleNombre">
           <p>Soy</p>
-          <h1>Mirco Martin</h1>
+          <h1>Engels Prado</h1>
 
           <span id="element" className="element">
             <Typed

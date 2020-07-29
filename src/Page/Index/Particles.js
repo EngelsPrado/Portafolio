@@ -5,6 +5,7 @@ import Typed from 'react-typed';
 
 const Particle = () => {
 
+
 	//Activo Typed Js
 	const textLines = [' DESIGNER', 'UI/UX DEVELOPER'];
 

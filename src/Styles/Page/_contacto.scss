@@ -32,7 +32,6 @@
 		button {
 			margin-top: 20px;
 			width: 100%;
-
 		}
 	}
 	.body-contacto {
@@ -48,17 +47,17 @@
 	}
 	.map {
 		height: 400px;
-    }
-    @media screen and (max-width: 768px) {
-        form {
-            .form-group {
-                display: block!important;
-                input {
-                    &.nombre-email {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
+	}
+	@media screen and (max-width: 768px) {
+		form {
+			.form-group {
+				display: block !important;
+				input {
+					&.nombre-email {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 }

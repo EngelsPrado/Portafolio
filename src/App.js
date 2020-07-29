@@ -10,9 +10,8 @@ import Servicios from "./Page/Servicios";
 function App() {
   return (
     <>
-      <Header></Header>
+      <Header/>
       <Servicios />
-      <SobreMi />
       <Footer />
     </>
   );

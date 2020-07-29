@@ -11,16 +11,6 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
-//Typed
-var typed = new Typed('.element', {
-  strings: [" DESIGNER", "UI/UX DEVELOPER"],
-  loop: true,
-  startDelay: 0,
-  typeSpeed: 200,
-  backDelay: 600,
-  showCursor: true,
-});
-
 particlesJS('particles-js',
   
   {

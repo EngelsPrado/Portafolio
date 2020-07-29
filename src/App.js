@@ -6,13 +6,13 @@ import SobreMi from "./Page/SobreMi";
 import Header from "./Components/Header";
 import Servicios from "./Page/Servicios";
 
-
 function App() {
   return (
     <>
       <Header></Header>
       <Servicios />
       <SobreMi />
+      <Contacto></Contacto>
       <Footer />
     </>
   );

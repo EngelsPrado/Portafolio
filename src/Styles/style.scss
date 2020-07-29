@@ -1,16 +1,13 @@
 //Variables
-@import "./Base/variables";
+@import './Base/variables';
 //Estilos Globales
-@import "./Base/globales";
+@import './Base/globales';
 
 //COMPONENTS
-@import "./Components/footer";
+@import './Components/footer';
+@import './Components/header';
 
 //PAGES
-
-
 @import './Page/contacto';
-=======
-@import "./Page/sobremi";
-@import "./Page/servicios";
-
+@import './Page/sobremi';
+@import './Page/servicios';

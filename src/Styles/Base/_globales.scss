@@ -1,24 +1,24 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	scroll-behavior: smooth;
-	outline: none;
-	-webkit-appearance:none;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+  outline: none;
+  -webkit-appearance: none;
+}
 
 figure {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-size: 16px;
-	line-height: 20px;
-	background: $blancoBG;
-	font-family: $font-principal;
-	color: $negro1;
+  font-size: 16px;
+  line-height: 20px;
+  background: $blancoBG;
+  font-family: $font-principal;
+  color: $negro1;
 }
 
 /* ------------------------- */
@@ -26,108 +26,109 @@ body {
 /* ------------------------- */
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-	vertical-align: top;
+  vertical-align: top;
 }
 
 .img-fluid {
-	max-width: 100%;
-	height: auto;
-	vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
 }
 
 .titulos-index {
-	line-height: 1.6rem;
-	font-weight: 600;
-    font-size: 1.5625rem;
-    color: $negro1;
-	font-family: $font-2;
-	margin-bottom: 2.5rem;
-	text-align: center;
+  line-height: 1.6rem;
+  font-weight: 600;
+  font-size: 1.5625rem;
+  color: $negro1;
+  font-family: $font-2;
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .parrafo {
-	margin-bottom: 20px;
-	text-align: justify;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
 .leer-mas {
-	color: $negro1;
-	font-family: $font-principal;
-	padding: 10px;
-	border: 1px solid $red;
-	transition: .1s ease all;
-	margin-top: 20px;
-	display: inline-block;
-	cursor: pointer;
-	&:hover{
-		color: $blanco;
-		background: $red;
-	}
+  color: $negro1;
+  font-family: $font-principal;
+  padding: 10px;
+  border: 1px solid $red;
+  transition: 0.1s ease all;
+  margin-top: 20px;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    color: $blanco;
+    background: $red;
+  }
 }
 
 .wrapper-red {
-	background: $red;
-	margin: 3.125rem 0;
-	padding: 2.5rem 0;
-	color: $blanco;
+  background: $red;
+  margin: 3.125rem 0;
+  padding: 2.5rem 0;
+  color: $blanco;
 }
 
 .wrapper-blue {
-	background: $azul url('/static/img/bg-section.jpg') scroll;
-	width: 100%;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	padding: 2.5rem 0;
-	opacity: .95;
+  background: $azul url("/static/img/bg-section.jpg") scroll;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2.5rem 0;
+  opacity: 0.95;
 }
 
 .titulos-h4 {
-	font-family: $font-2;
-	font-size: 1.375rem;
-	font-weight: 600;
-	margin: 1.25rem 0;
+  font-family: $font-2;
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 1.25rem 0;
 }
 
 .titulo-seccion {
-	font-family: $font-2;
-	font-size: 35px;
-	color: $blanco;
-	font-weight: 700;
-	text-align: center;
-	padding: 152px 0 50px;
-	position: relative;
-	&::after {
-		content: '';
-		width: 80px;
-		height: 3px;
-		position: absolute;
-		bottom: 5%;
-		left: calc(50% - 40px);
-		background: $red;
-	}
+  font-family: $font-2;
+  font-size: 35px;
+  color: $blanco;
+  font-weight: 700;
+  text-align: center;
+  padding: 152px 0 50px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    bottom: 5%;
+    left: calc(50% - 40px);
+    background: $red;
+  }
 }
 
 .redes-general {
-	a {
-		transition: .15s ease all;
-		color: $blanco;
-		&:hover {
-			color: $red;
-		}
-	}
+  a {
+    transition: 0.15s ease all;
+    color: $blanco;
+    &:hover {
+      color: $red;
+    }
+  }
 }
 
 .map {
-	width: 100%;
-	border: none;
+  width: 100%;
+  border: none;
 }
 
 main.secciones {
+
 	padding: 50px 0;
 }
 
@@ -147,3 +148,130 @@ main.secciones {
 		margin: 18px 0;
 	}
 }
+=======
+  padding: 50px 0;
+}
+
+/* ------------------------- */
+/* Header */
+/* ------------------------- */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: 0.5s ease all;
+  padding-bottom: 20px;
+  nav {
+    .mm-wrapper {
+      .contenedor-logo {
+        .btn-menu {
+          display: none;
+          color: $blanco;
+          font-size: 30px;
+        }
+      }
+      .menu {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          color: $blanco;
+          padding: 20px 10px;
+          font-family: $font-2;
+          font-size: 14px;
+          font-weight: 600;
+          transition: 0.1s ease all;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+      .redes-sociales {
+        a {
+          color: $blanco;
+          font-size: 1rem;
+          transition: 0.1s ease all;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-hide {
+  padding-top: 40px;
+  background: transparent;
+}
+.nav-show {
+  padding-top: 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    nav {
+      .mm-wrapper {
+        .contenedor-logo {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          align-items: center;
+          .brand-menu {
+            order: 1;
+          }
+          .btn-menu {
+            order: 0;
+            display: inline-block;
+            cursor: pointer;
+          }
+        }
+        .menu {
+          flex-direction: column;
+          width: 100%;
+          li {
+            margin-top: 10px;
+            a {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contacto {
+    form {
+      .form-group {
+        display: block !important;
+        input {
+          &.nombre-email {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .parallax-particles {
+    .info {
+      .wrapper-saludo {
+        .saludo {
+          font-size: 70px;
+          line-height: 80px;
+        }
+      }
+    }
+  }
+
+  .parallax-trabajemos-juntos {
+    h3 {
+      line-height: 50px;
+    }
+  }
+}
+

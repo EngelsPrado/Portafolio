@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.scss';
 
 const Footer = () => {
 	return (
@@ -37,9 +36,9 @@ const Footer = () => {
 					</section>
 				</div>
 			</div>
-			<a id="backToTop" className="back-hide back-to-top" href>
+			<div id="backToTop" className="back-hide back-to-top">
 				<i className="icon-angle-circled-up" />
-			</a>
+			</div>
 		</footer>
 	);
 };

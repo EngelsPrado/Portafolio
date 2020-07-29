@@ -12,11 +12,22 @@ const Particle = () => {
       <Particles
         params={{
           particles: {
+            number: {
+              value: 100,
+            },
             line_linked: {
               shadow: {
                 enable: true,
                 color: "#3CA9D1",
                 blur: 5,
+              },
+            },
+          },
+          interactivity: {
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
               },
             },
           },

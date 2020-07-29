@@ -6,6 +6,7 @@ import SobreMi from "./Page/SobreMi";
 import Header from "./Components/Header";
 import Servicios from "./Page/Servicios";
 import Portafolio from "./Page/Portafolio";
+import Index from "./Page/Index";
 import Particles from "react-particles-js";
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Servicios></Servicios>
       <Portafolio />
       <Contacto></Contacto>
+
       <Footer />
     </>
   );

@@ -21,7 +21,7 @@ header {
         justify-content: flex-end;
         a {
           color: $blanco;
-          padding: 2px;
+
           padding: 20px 10px;
           font-family: $font-2;
           font-size: 14px;
@@ -65,9 +65,11 @@ header {
           flex-direction: column;
           width: 100%;
           li {
+            margin-bottom: 5px;
             margin-top: 10px;
             a {
               width: 100%;
+              font-size: 20px;
             }
           }
         }
@@ -75,6 +77,7 @@ header {
     }
   }
 }
+
 .nav-hide {
   padding-top: 40px;
   background: transparent;

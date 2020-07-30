@@ -11,6 +11,7 @@ export default function PortafolioSection() {
           <article class="col-12 col-md-4 wrapper-option">
             <figure class="option">
               <img
+                loading="lazy"
                 class="img-fluid"
                 src="static/img/surf.jpg"
                 alt="Surf-Blog"
@@ -27,6 +28,7 @@ export default function PortafolioSection() {
           <article class="col-12 col-md-4 wrapper-option">
             <figure class="option">
               <img
+                loading="lazy"
                 class="img-fluid"
                 src="static/img/nutricion.jpg"
                 alt="Licenciada en Nutricion"
@@ -43,6 +45,7 @@ export default function PortafolioSection() {
           <article class="col-12 col-md-4 wrapper-option">
             <figure class="option">
               <img
+                loading="lazy"
                 class="img-fluid"
                 src="static/img/pasteleria.jpg"
                 alt="Pasteleria Artesanal"
@@ -59,6 +62,7 @@ export default function PortafolioSection() {
           <article class="col-12 col-md-4 wrapper-option">
             <figure class="option">
               <img
+                loading="lazy"
                 class="img-fluid"
                 src="static/img/pasteleria.jpg"
                 alt="Pasteleria Artesanal"
@@ -75,6 +79,7 @@ export default function PortafolioSection() {
           <article class="col-12 col-md-4 wrapper-option">
             <figure class="option">
               <img
+                loading="lazy"
                 class="img-fluid"
                 src="static/img/pasteleria.jpg"
                 alt="Pasteleria Artesanal"
@@ -91,6 +96,7 @@ export default function PortafolioSection() {
           <article class="col-12 col-md-4 wrapper-option">
             <figure class="option">
               <img
+                loading="lazy"
                 class="img-fluid"
                 src="static/img/pasteleria.jpg"
                 alt="Pasteleria Artesanal"

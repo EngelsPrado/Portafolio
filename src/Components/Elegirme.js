@@ -51,6 +51,7 @@ export default function Elegirme() {
               </div>
               <figure class="col-12 col-lg-6 order-0 order-lg-1 elegirme-img">
                 <img
+                  loading="lazy"
                   class="img-fluid"
                   src="static/img/elegirme.jpg"
                   alt="Mirco Martin Front-End Developer"

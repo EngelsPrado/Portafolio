@@ -24,6 +24,7 @@ export default function About() {
         </div>
         <figure class="col-12 order-0 order-lg-1 col-lg-6 img-sobreMi">
           <img
+            loading="lazy"
             class="img-fluid"
             src="static/img/IMG_20190418_164907.jpg"
             width="300px"

@@ -64,7 +64,7 @@ const Contacto = () => {
 							<section className="redes-general d-flex justify-content-center justify-content-md-start">
 								<a
 									className="instagram"
-									href="https://www.instagram.com/engels_prado/"
+									href="https://www.instagram.com/mirco_martin"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
@@ -72,7 +72,7 @@ const Contacto = () => {
 								</a>
 								<a
 									className="facebook"
-									href="https://www.facebook.com/EngelsLoveEngels/"
+									href="https://www.facebook.com/mircocmartin"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
@@ -80,7 +80,7 @@ const Contacto = () => {
 								</a>
 								<a
 									className="linkedin"
-									href="https://www.linkedin.com/in/engels-prado-397096168/"
+									href="https://www.linkedin.com/in/mirco-martin-a3b70670"
 									target="_blank"
 									rel="noopener noreferrer"
 								>

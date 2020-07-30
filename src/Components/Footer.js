@@ -11,7 +11,7 @@ const Footer = () => {
 					<section className="col-auto redes-general">
 						<a
 							className="instagram"
-							href="https://www.instagram.com/layback.ar"
+							href="https://www.instagram.com/mirco_martin"
 							target="_blank"
 							rel="noopener noreferrer"
 						>

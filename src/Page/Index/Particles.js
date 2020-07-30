@@ -1,47 +1,19 @@
 import React from 'react';
+import Particulas from './SubComponentsIndex/Particulas';
 
-import Particles from 'react-particles-js';
+//Libreria TypeJs
 import Typed from 'react-typed';
 
 const Particle = () => {
+
 	//Activo Typed Js
 	const textLines = [' DESIGNER', 'UI/UX DEVELOPER'];
 
 	return (
 		<section className="parallax-particles">
-			<Particles
-				params={{
-					particles: {
-						number: {
-							value: 40,
-						},
-						line_linked: {
-							shadow: {
-								enable: true,
-								color: '#3CA9D1',
-								blur: 2,
-							},
-						},
-                    },
-                    move: {
-                        enable: true,
-                        speed: 6,
-                        direction: "none",
-                        random: false,
-                        straight: false,
-                        out_mode: "out",
-                        bounce: false,
-                    },
-					interactivity: {
-						events: {
-							onhover: {
-								enable: true,
-								mode: 'repulse',
-							},
-						},
-					},
-				}}
-			/>
+
+			<Particulas/>
+			
 			<div className="info">
 				<div className="wrapper-saludo">
 					<h3 className="saludo">Hola</h3>

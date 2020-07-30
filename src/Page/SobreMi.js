@@ -40,7 +40,11 @@ const SobreMi = () => {
                 deportes, soy amante del football. Tambien otro hobbie que me
                 gusta es andar en bicicleta y jugar al baseball.
               </p>
-              <a href="#" className="leer-mas">
+              <a
+                href="static/img/CVEngelsPradoEn1 (1).pdf"
+                download="CV EngelsPrado"
+                className="leer-mas"
+              >
                 Descargar CV
               </a>
             </div>

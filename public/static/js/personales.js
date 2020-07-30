@@ -61,15 +61,14 @@ $(function () {
     btnMenu = $("#btn-menu"),
     icono = $("#btn-menu .icono");
 
-  enlaces.on("click", function (e) {
-    enlaces.hide();
-    icono.addClass("icon-menu");
-  });
-
   if (ancho <= 768) {
     enlaces.hide();
     //enlacesLI.show(); ADEMAS EN CSS AGREGAR AL LI DISPLAY NONE
     icono.addClass("icon-menu");
+    enlaces.on("click", function (e) {
+      enlaces.hide();
+      icono.addClass("icon-menu");
+    });
   }
 
   btnMenu.on("click", function (e) {

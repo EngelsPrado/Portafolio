@@ -18,12 +18,13 @@
 /* ------------------------- */
 /* Carousel */
 /* ------------------------- */
-.carousel__contenedor {
-	position: relative;
+
+.glider {
+	overflow: hidden;
 }
 
-.carousel__anterior,
-.carousel__siguiente {
+.glider-prev,
+.glider-next {
 	position: absolute;
 	display: block;
 	width: 30px;
@@ -43,13 +44,13 @@
 	}
 }
 
-.carousel__anterior {
+.glider-prev {
 	left: 0px;
 	z-index: 999;
 }
 
-.carousel__siguiente {
-	right: 10px;
+.glider-next {
+	right: 0px;
 	z-index: 999;
 }
 
@@ -61,17 +62,17 @@
 	text-align: center;
 }
 
-.carousel__indicadores {
+.glider-dots {
 	margin-top: 20px;
 	.glider-dot {
 		display: block;
 		width: 30px;
 		height: 4px;
 		background: $red;
-		opacity: .2;
+		opacity: 0.2;
 		border-radius: 0;
 		&:hover {
-			opacity: .5;
+			opacity: 0.5;
 		}
 	}
 	.glider-dot.active {

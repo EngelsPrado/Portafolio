@@ -13,13 +13,13 @@ const Particle = () => {
 				params={{
 					particles: {
 						number: {
-							value: 80,
+							value: 40,
 						},
 						line_linked: {
 							shadow: {
 								enable: true,
 								color: '#3CA9D1',
-								blur: 5,
+								blur: 2,
 							},
 						},
                     },

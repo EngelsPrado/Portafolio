@@ -6,12 +6,12 @@ const Header = () => {
 			<nav className="container">
 				<div className="row mm-wrapper justify-content-between align-items-center">
 					<figure className="contenedor-logo col-auto">
-						<a className="brand-menu" to="/">
+						<Link className="brand-menu" to="/">
 							<img src="/static/img/logo.png" alt="Logo Mirco Martin" />
-						</a>
-						<a className="btn-menu" id="btn-menu">
+						</Link>
+						<span className="btn-menu" id="btn-menu">
 							<i className="icono icon-menu" aria-hidden="true" />
-						</a>
+						</span>
 					</figure>
 					<ul className="menu col-12 col-md-9" id="enlaces">
 						<li>

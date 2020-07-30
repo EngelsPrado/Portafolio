@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 import WrapperBlue from '../Components/WrapperBlue';
 
@@ -43,9 +44,9 @@ const SobreMi = () => {
 								Tambien otro hobbie que me gusta es andar en skate y jugar al
 								futbol.
 							</p>
-							<a href="#" className="leer-mas">
+							<Link href="#" className="leer-mas">
 								Descargar CV
-							</a>
+							</Link>
 						</div>
 					</div>
 					<div className="row" data-aos="fade-up">

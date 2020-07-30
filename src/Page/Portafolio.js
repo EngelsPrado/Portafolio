@@ -5,54 +5,41 @@ import WrapperBlue from '../Components/WrapperBlue';
 //Aos Bblioteca JS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+//Carousel
+import GliderComponent from 'react-glider-carousel';
 
 const Portafolio = () => {
-
-    //Inicializo
+	//Inicializo
 	AOS.init();
-	    
+
 	return (
 		<>
-			<WrapperBlue titulo="Ultimo Proyecto"/>
+			<WrapperBlue titulo="Ultimo Proyecto" />
 
 			<main className="secciones">
 				<section className="container portafolio" data-aos="fade-up">
 					<div className="row">
 						<div className="carousel col-12 mb-5">
-							<div className="carousel__contenedor">
-								<button
-									aria-label="Anterior"
-									className="carousel__anterior"
-								>
-									<i className="icon-angle-circled-left" />
-								</button>
-								<div className="carousel__lista">
-									<div className="carousel__elemento">
-										<img
-											src="static/img/uno.png"
-											alt="Licenciada Mariel Leone"
-										/>
-									</div>
-									<div className="carousel__elemento">
-										<img
-											src="static/img/dos.png"
-											alt="Licenciada Mariel Leone"
-										/>
-									</div>
-									<div className="carousel__elemento">
-										<img
-											src="static/img/tres.png"
-											alt="Licenciada Mariel Leone"
-										/>
-									</div>
+							<GliderComponent hasArrows={true} hasDots={true}>
+								<div className="carousel__elemento">
+									<img
+										src="static/img/uno.png"
+										alt="Licenciada Mariel Leone"
+									/>
 								</div>
-								<button
-									aria-label="Siguiente"
-									className="carousel__siguiente"
-								>
-									<i className="icon-angle-circled-right" />
-								</button>
-							</div>
+								<div className="carousel__elemento">
+									<img
+										src="static/img/dos.png"
+										alt="Licenciada Mariel Leone"
+									/>
+								</div>
+								<div className="carousel__elemento">
+									<img
+										src="static/img/tres.png"
+										alt="Licenciada Mariel Leone"
+									/>
+								</div>
+							</GliderComponent>
 							<div role="tablist" className="carousel__indicadores" />
 						</div>
 					</div>
@@ -69,16 +56,16 @@ const Portafolio = () => {
 								<a
 									className="instagram"
 									href="https://www.instagram.com/lic.marielleone/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+									target="_blank"
+									rel="noopener noreferrer"
 								>
 									<i className="icon-instagram" />
 								</a>
 								<a
 									className="facebook"
 									href="https://www.facebook.com/mariel.leone.7"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+									target="_blank"
+									rel="noopener noreferrer"
 								>
 									<i className="icon-facebook" />
 								</a>

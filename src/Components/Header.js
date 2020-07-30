@@ -9,7 +9,7 @@ const Header = () => {
             <a className="brand-menu" to="/">
               <img
                 src="/static/img/logo_size_invert.jpg"
-                width="86px"
+                className="logo"
                 alt="Logo Engels Prado"
               />
             </a>

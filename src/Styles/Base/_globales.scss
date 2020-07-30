@@ -28,7 +28,9 @@ body {
 a {
   text-decoration: none;
 }
-
+.logo {
+  width: 86px;
+}
 img {
   vertical-align: top;
 }
@@ -146,9 +148,10 @@ main.secciones {
     font-weight: 600;
     margin: 18px 0;
   }
+  .logo {
+    width: 46px;
+  }
 }
-
-
 
 @media screen and (max-width: 576px) {
   .parallax-particles {
@@ -161,11 +164,12 @@ main.secciones {
       }
     }
   }
-
+  .logo {
+    width: 46px;
+  }
   .parallax-trabajemos-juntos {
     h3 {
       line-height: 50px;
     }
   }
 }
-

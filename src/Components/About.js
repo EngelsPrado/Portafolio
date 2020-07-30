@@ -10,12 +10,12 @@ export default function About() {
         <div class="col-12 order-1 order-lg-0 col-lg-6 info-sobreMi">
           <h3 class="titulos-index">Conoceme...</h3>
           <p class="parrafo">
-            Me llamo Mirco Martin y me encanta desarrollar webs. Desde hace más
-            de 2 años ayudo a negocios y pequeñas empresas a captar clientes en
-            internet mediante la creación de una web profesional que transmita
-            una imagen corporativa adecuada de su empresa y posicione alto en
-            Google. Para ello llevo a cabo la creación de páginas web a medida,
-            adaptando al presupuesto tope que se me plantee e intentando
+            Me llamo Engels Prado Herrera, y me encanta desarrollar webs. Desde
+            hace más de 3 años ayudo a negocios y pequeñas empresas a captar
+            clientes en internet mediante la creación de una web profesional que
+            transmita una imagen corporativa adecuada de su empresa y posicione
+            alto en Google. Para ello llevo a cabo la creación de páginas web a
+            medida, adaptando al presupuesto tope que se me plantee e intentando
             orientarlas a la consecución de beneficios.
           </p>
           <a href="#" class="leer-mas">
@@ -25,7 +25,8 @@ export default function About() {
         <figure class="col-12 order-0 order-lg-1 col-lg-6 img-sobreMi">
           <img
             class="img-fluid"
-            src="img/index-sobremi.jpg"
+            src="static/img/IMG_20190418_164907.jpg"
+            width="300px"
             alt="Mirco Martin Desarrollador Web"
           />
         </figure>

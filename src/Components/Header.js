@@ -7,7 +7,11 @@ const Header = () => {
         <div className="row mm-wrapper justify-content-between align-items-center">
           <figure className="contenedor-logo col-auto">
             <a className="brand-menu" to="/">
-              <img src="/static/img/logo.png" alt="Logo Mirco Martin" />
+              <img
+                src="/static/img/logo_size_invert.jpg"
+                width="86px"
+                alt="Logo Engels Prado"
+              />
             </a>
             <a className="btn-menu" id="btn-menu">
               <i className="icono icon-menu" aria-hidden="true" />

@@ -10,13 +10,13 @@ export default function ContactMe() {
           </div>
           <div class="col-12 col-lg-6 contacto-info">
             <p>
-              <i class="icon-location"></i> Rosario, Santa Fe
+              <i class="icon-location"></i>Managua,Nicaragua
             </p>
             <p>
-              <i class="icon-mail"></i> consultas@mmdiseños.com.ar
+              <i class="icon-mail"></i> engelsprado7@gmail.com
             </p>
             <p>
-              <i class="icon-whatsapp"></i> 3415 486863
+              <i class="icon-whatsapp"></i> +50575549314
             </p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15602.299071481382!2d-86.20143468092044!3d12.1412207032506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcc08b332971870e2!2sMATEPSA!5e0!3m2!1ses-419!2sni!4v1596079051546!5m2!1ses-419!2sni"

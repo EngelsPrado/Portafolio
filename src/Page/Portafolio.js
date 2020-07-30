@@ -1,5 +1,5 @@
 import React from "react";
-
+import GliderComponent from "react-glider-carousel";
 import WrapperBlue from "../Components/WrapperBlue";
 
 //Aos Bblioteca JS
@@ -19,10 +19,7 @@ const Portafolio = () => {
           <div className="row">
             <div className="carousel col-12 mb-5">
               <div className="carousel__contenedor">
-                <button aria-label="Anterior" className="carousel__anterior">
-                  <i className="icon-angle-circled-left" />
-                </button>
-                <div className="carousel__lista">
+                <GliderComponent hasArrows={true} hasDots={true}>
                   <div className="carousel__elemento">
                     <img
                       src="static/img/uno.png"
@@ -41,10 +38,7 @@ const Portafolio = () => {
                       alt="Licenciada Mariel Leone"
                     />
                   </div>
-                </div>
-                <button aria-label="Siguiente" className="carousel__siguiente">
-                  <i className="icon-angle-circled-right" />
-                </button>
+                </GliderComponent>
               </div>
               <div role="tablist" className="carousel__indicadores" />
             </div>

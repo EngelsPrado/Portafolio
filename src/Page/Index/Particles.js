@@ -43,7 +43,7 @@ const Particle = () => {
         </div>
         <div className="detalleNombre">
           <p>Soy</p>
-          <h1>Mirco Martin</h1>
+          <h1>Engels Prado</h1>
 
           <span id="element" className="element">
             <Typed

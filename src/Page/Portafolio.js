@@ -22,19 +22,13 @@ const Portafolio = () => {
                 <GliderComponent hasArrows={true} hasDots={true}>
                   <div className="carousel__elemento">
                     <img
-                      src="static/img/uno.png"
+                      src="static/img/chat1.png"
                       alt="Licenciada Mariel Leone"
                     />
                   </div>
                   <div className="carousel__elemento">
                     <img
-                      src="static/img/dos.png"
-                      alt="Licenciada Mariel Leone"
-                    />
-                  </div>
-                  <div className="carousel__elemento">
-                    <img
-                      src="static/img/tres.png"
+                      src="static/img/chat2.png"
                       alt="Licenciada Mariel Leone"
                     />
                   </div>
@@ -46,7 +40,7 @@ const Portafolio = () => {
           <div className="row align-items-center">
             <div className="col-12 order-1 col-md-4 order-md-0 mb-5 mb-md-0">
               <p>
-                <strong>Cliente: </strong>Licenciada Mariel Leone
+                <strong>Cliente: </strong>Sin Riesgos SA
               </p>
               <p>
                 <strong>Año: </strong>2020
@@ -72,20 +66,13 @@ const Portafolio = () => {
               </p>
             </div>
             <div className="col-12 order-1 col-md-8 order-md-1 detalles-proyecto">
-              <h4 className="titulos-index">Licenciada Mariel Leone</h4>
+              <h4 className="titulos-index">Chat por grupo y privado</h4>
               <p>
-                La nueva temporada de productos Dino trajo aparejado la
-                producción de nuevos materiales POP para la linea librería. La
-                mayor complejidad radicaba en que estos materiales estarían
-                presentes en muchas cadenas, muy distintas todas y con
-                características diferentes.
+                Esta aplicacion web fue creada con NodeJs,Sockets y
+                Bootstrap.Deploy de la aplicacion usando Heroku
               </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit,
-                ut! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti quas officia doloribus dolores? Corrupti doloribus
-                aliquid inventore ipsam explicabo minus!
-              </p>
+              <strong>Preview </strong>
+              <a href="https://mysendapp.herokuapp.com/">Aqui</a>
             </div>
           </div>
         </section>

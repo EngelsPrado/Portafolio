@@ -2,9 +2,9 @@
 $(document).on("scroll", function () {
   var skills = {
     ht: 90,
-    jq: 50,
-    rs: 40,
-    wq: 80,
+    jq: 80,
+    rs: 90,
+    wq: 90,
   };
 
   $.each(skills, function (key, value) {

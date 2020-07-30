@@ -33,7 +33,7 @@ const Header = () => {
           <section className="col-auto redes-sociales d-none d-lg-block">
             <a
               className="instagram"
-              href="https://www.instagram.com/layback.ar"
+              href="https://www.instagram.com/engels_prado"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -41,7 +41,7 @@ const Header = () => {
             </a>
             <a
               className="facebook"
-              href="https://www.facebook.com/mircocmartin"
+              href="https://www.facebook.com/EngelsLoveEngels/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -49,7 +49,7 @@ const Header = () => {
             </a>
             <a
               className="linkedin"
-              href="https://www.linkedin.com/in/mirco-martin-a3b70670"
+              href="https://www.linkedin.com/in/engels-prado-397096168/"
               target="_blank"
               rel="noopener noreferrer"
             >

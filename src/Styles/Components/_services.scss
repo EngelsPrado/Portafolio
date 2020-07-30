@@ -1,0 +1,19 @@
+/* ------------------------- */
+/* Servicios - Index */
+/* ------------------------- */
+.servicios-index {
+  .titulos-index {
+    color: $blanco;
+  }
+  .titulos-h4 {
+    text-align: center;
+  }
+  i {
+    font-size: 40px;
+    text-align: center;
+    display: block;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

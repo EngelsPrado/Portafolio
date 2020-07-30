@@ -1,0 +1,57 @@
+/* ------------------------- */
+/* Contacto */
+/* ------------------------- */
+.contacto-index {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  p {
+    color: $texto;
+    margin-bottom: 20px;
+  }
+  .contacto-info {
+    i {
+      color: $red;
+    }
+  }
+  .formulario {
+    .form-group {
+      margin-bottom: 20px;
+      input,
+      textarea {
+        border: 1px solid #ced4da;
+        width: 100%;
+        padding: 5px;
+        line-height: 1.15px;
+      }
+      textarea {
+        padding: 15px;
+        height: 200px;
+        min-height: 200px;
+        max-height: 400px;
+      }
+      label {
+        padding: 6px;
+        border-left: 1px solid #ced4da;
+        border-top: 1px solid #ced4da;
+        border-bottom: 1px solid #ced4da;
+      }
+      .boton-enviar {
+        padding: 10px;
+        border: 1px solid $red;
+        -webkit-transition: 0.1s ease all;
+        transition: 0.1s ease all;
+        margin-top: 20px;
+        cursor: pointer;
+        &:hover {
+          color: #fff;
+          background: $red;
+        }
+      }
+      .form-nombre-email,
+      .form-asunto {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

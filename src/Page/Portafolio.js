@@ -9,8 +9,8 @@ import 'aos/dist/aos.css';
 const Portafolio = () => {
 
     //Inicializo
-    AOS.init();
-    
+	AOS.init();
+	    
 	return (
 		<>
 			<WrapperBlue titulo="Ultimo Proyecto"/>

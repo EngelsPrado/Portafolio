@@ -5,8 +5,9 @@ import WrapperBlue from '../Components/WrapperBlue';
 //Aos Bblioteca JS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 //Carousel
-import GliderComponent from 'react-glider-carousel';
+import Carousel from './../Components/Index/SubComponentsIndex/Carousel';
 
 const Portafolio = () => {
 	//Inicializo
@@ -19,29 +20,9 @@ const Portafolio = () => {
 			<main className="secciones">
 				<section className="container portafolio" data-aos="fade-up">
 					<div className="row">
-						<div className="carousel col-12 mb-5">
-							<GliderComponent hasArrows={true} hasDots={true}>
-								<div className="carousel__elemento">
-									<img
-										src="static/img/uno.png"
-										alt="Licenciada Mariel Leone"
-									/>
-								</div>
-								<div className="carousel__elemento">
-									<img
-										src="static/img/dos.png"
-										alt="Licenciada Mariel Leone"
-									/>
-								</div>
-								<div className="carousel__elemento">
-									<img
-										src="static/img/tres.png"
-										alt="Licenciada Mariel Leone"
-									/>
-								</div>
-							</GliderComponent>
-							<div role="tablist" className="carousel__indicadores" />
-						</div>
+
+						<Carousel/>
+
 					</div>
 					<div className="row align-items-center">
 						<div className="col-12 order-1 col-md-4 order-md-0 mb-5 mb-md-0">

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { Link } from '@reach/router';
+
 const Header = () => {
 	return (
 		<header className="nav-hide" id="header">
@@ -7,7 +9,10 @@ const Header = () => {
 				<div className="row mm-wrapper justify-content-between align-items-center">
 					<figure className="contenedor-logo col-auto">
 						<Link className="brand-menu" to="/">
-							<img src="/static/img/logo.png" alt="Logo Mirco Martin" />
+							<img
+								src="/static/img/logo.png"
+								alt="Logo Mirco Martin Diseños"
+							/>
 						</Link>
 						<span className="btn-menu" id="btn-menu">
 							<i className="icono icon-menu" aria-hidden="true" />
@@ -33,7 +38,7 @@ const Header = () => {
 					<section className="col-auto redes-sociales d-none d-lg-block">
 						<a
 							className="instagram"
-							href="https://www.instagram.com/layback.ar"
+							href="https://www.instagram.com/mirco_martin"
 							target="_blank"
 							rel="noopener noreferrer"
 						>

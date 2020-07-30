@@ -2,9 +2,9 @@
 $(document).on("scroll", function () {
   var skills = {
     ht: 90,
-    jq: 50,
-    rs: 40,
-    wq: 80,
+	  jq: 50,
+	  rs: 40,
+	  wq: 80
   };
 
   $.each(skills, function (key, value) {
@@ -46,18 +46,25 @@ document.addEventListener("scroll", function () {
 
   $backToTop.addEventListener("click", (e) => {
     document.documentElement.scrollTop = 0;
+
     e.preventDefault();
   });
 });
 
 //Menu Responsive
 $(function () {
+  const $header = document.querySelector("#header");
   //Calculamos el ancho de la pagina
   const ancho = $(window).width(),
     enlaces = $("#enlaces"),
     //enlacesLI = $('#enlaces li'),
     btnMenu = $("#btn-menu"),
     icono = $("#btn-menu .icono");
+
+  enlaces.on("click", function (e) {
+    enlaces.hide();
+    icono.addClass("icon-menu");
+  });
 
   if (ancho <= 768) {
     enlaces.hide();

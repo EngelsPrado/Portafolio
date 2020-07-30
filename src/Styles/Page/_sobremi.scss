@@ -18,9 +18,8 @@
 .bar {
 	margin-top: 20px;
 }
-
 .skill {
-	font-size: .8em;
+	font-size: 0.8em;
 	text-transform: uppercase;
 	margin-bottom: 0.25em;
 	color: $texto;
@@ -36,23 +35,23 @@
 	border-radius: 0.3em;
 	display: none;
 }
-  
-.html{
+
+.html {
 	left: calc(90% - 1.5em);
 }
 
-.js	{
+.js {
 	left: calc(50% - 1.5em);
 }
 
-.re	{
+.re {
 	left: calc(40% - 1.5em);
 }
 
-.wp	{
+.wp {
 	left: calc(80% - 1.5em);
 }
-  
+
 .speech-bubble:after {
 	border: 0.5em solid transparent;
 	content: '';
@@ -61,26 +60,35 @@
 	top: 100%;
 	left: 50%;
 }
-  
+
 .bar-outer {
 	height: 1em;
 	background: #c2c2c2;
 	position: relative;
 	border-radius: 0.3em;
 }
-  
+
 .bar-inner {
 	width: 0;
 	height: 1em;
 	border-radius: 0.3em;
 }
-  
-.ht, .html, .js, .jq, .re, .rs, .wp, .wq {
+
+.ht,
+.html,
+.js,
+.jq,
+.re,
+.rs,
+.wp,
+.wq {
 	background: $red;
-	color: $blancoBG
+	color: $blancoBG;
 }
-  
-.html:after, .js:after, .re:after, .wp:after {
+
+.html:after,
+.js:after,
+.re:after,
+.wp:after {
 	border-top-color: $red;
 }
-  

@@ -12,24 +12,24 @@ const Footer = () => {
 						<a
 							className="instagram"
 							href="https://www.instagram.com/layback.ar"
-                            target="_blank"
-                            rel="noopener noreferrer"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<i className="icon-instagram" />
 						</a>
 						<a
 							className="facebook"
 							href="https://www.facebook.com/mircocmartin"
-                            target="_blank"
-                            rel="noopener noreferrer"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<i className="icon-facebook" />
 						</a>
 						<a
 							className="linkedin"
 							href="https://www.linkedin.com/in/mirco-martin-a3b70670"
-                            target="_blank"
-                            rel="noopener noreferrer"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<i className="icon-linkedin-squared" />
 						</a>

@@ -4,16 +4,15 @@ import WrapperBlue from '../Components/WrapperBlue';
 
 //Aos Bblioteca JS
 import AOS from 'aos';
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css';
 
 const SobreMi = () => {
-	
 	//Inicializo
 	AOS.init();
 
 	return (
 		<>
-			<WrapperBlue titulo="Sobre Mi"/>
+			<WrapperBlue titulo="Sobre Mi" />
 
 			<main className="secciones">
 				<section className="container sobremi">
@@ -29,23 +28,28 @@ const SobreMi = () => {
 							<p>
 								Me llamo Mirco Martin y me encanta desarrollar webs. Desde
 								hace más de 2 años ayudo a negocios y pequeñas empresas a
-								captar clientes en internet mediante la creación de una web
-								profesional que transmita una imagen corporativa adecuada de
-								su empresa y posicione alto en Google. Para ello llevo a cabo
-								la creación de páginas web a medida, adaptando al presupuesto
-								tope que se me plantee e intentando orientarlas a la
-								consecución de beneficios.
+								captar clientes en internet mediante la creación de una
+								web profesional que transmita una imagen corporativa
+								adecuada de su empresa y posicione alto en Google. Para
+								ello llevo a cabo la creación de páginas web a medida,
+								adaptando al presupuesto tope que se me plantee e
+								intentando orientarlas a la consecución de beneficios.
 							</p>
 							<p>
 								Fuera del negocio, me gusta realizar diferentes tipos de
-								deportes, soy amante del surfing, me paso una gran parte del
-								año viajando practicandolo y a la vez poder seguir trabajando.
-								Tambien otro hobbie que me gusta es andar en skate y jugar al
-								futbol.
+								deportes, soy amante del surfing, me paso una gran parte
+								del año viajando practicandolo y a la vez poder seguir
+								trabajando. Tambien otro hobbie que me gusta es andar en
+								skate y jugar al futbol.
 							</p>
-							<button href="!#" className="leer-mas">
+							<a
+								href="/static/img/Profile.pdf"
+								className="leer-mas"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Descargar CV
-							</button>
+							</a>
 						</div>
 					</div>
 					<div className="row" data-aos="fade-up">

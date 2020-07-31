@@ -1,0 +1,12 @@
+{
+  "env": {
+    "APP_ID": "@app-idfirebase",
+    "APP_KEY": "@app-key-firebase",
+    "AUTH_DOMAIN": "@auth-domain",
+    "DB_URL": "@dburl",
+    "PROJECT_ID": "@projectid",
+    "STORAGE_BUCKET": "@storagebucket",
+    "SENDER_ID": "@senderid",
+    "MEASUREMENT_ID": "@measurementid"
+  }
+}

@@ -1,6 +1,25 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { useFirebaseApp } from "reactfire";
+import "firebase/firestore";
 export default function ContactMe() {
+  const firebaseApp = useFirebaseApp(); //Sólo funciona en componentes dentro de FirebaseAppProvider
+
+  const messages = firebaseApp.firestore().collection("Messages");
+
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [asunto, setAsunto] = useState("");
+  const [mensaje, setMensaje] = useState("");
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+
+    messages.add({ nombre, email, asunto, mensaje });
+    setNombre("");
+    setEmail("");
+    setAsunto("");
+    setMensaje("");
+  };
   return (
     <div>
       <section className="container contacto-index" id="contacto">
@@ -39,6 +58,8 @@ export default function ContactMe() {
                     placeholder="Nombre"
                     id="nombre"
                     type="text"
+                    value={nombre}
+                    onChange={(e) => setNombre(e.target.value)}
                   />
                 </div>
                 <div className="col-12 col-lg-6 form-nombre-email">
@@ -50,6 +71,8 @@ export default function ContactMe() {
                     placeholder="Email"
                     id="email"
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
@@ -58,15 +81,29 @@ export default function ContactMe() {
                   <label for="asunto">
                     <i className="icon-pencil"></i>
                   </label>
-                  <input placeholder="Asunto" id="asunto" type="text" />
+                  <input
+                    placeholder="Asunto"
+                    id="asunto"
+                    type="text"
+                    value={asunto}
+                    onChange={(e) => setAsunto(e.target.value)}
+                  />
                 </div>
               </div>
               <div className="form-group row">
                 <div className="col-12">
-                  <textarea placeholder="Dejame tu mensaje..."></textarea>
+                  <textarea
+                    value={mensaje}
+                    onChange={(e) => setMensaje(e.target.value)}
+                    placeholder="Dejame tu mensaje..."
+                  ></textarea>
                 </div>
                 <div className="col-12">
-                  <button type="submit" className="boton-enviar">
+                  <button
+                    type="submit"
+                    className="boton-enviar"
+                    onClick={sendMessage}
+                  >
                     Enviar
                   </button>
                 </div>

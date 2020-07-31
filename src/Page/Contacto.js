@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { useFirebaseApp } from "reactfire";
 import WrapperBlue from "../Components/WrapperBlue";
 
 //Aos Bblioteca JS
@@ -9,7 +9,24 @@ import "aos/dist/aos.css";
 const Contacto = () => {
   //Inicializo
   AOS.init();
+  const firebaseApp = useFirebaseApp(); //Sólo funciona en componentes dentro de FirebaseAppProvider
 
+  const messages = firebaseApp.firestore().collection("Messages");
+
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [asunto, setAsunto] = useState("");
+  const [mensaje, setMensaje] = useState("");
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+
+    messages.add({ nombre, email, asunto, mensaje });
+    setNombre("");
+    setEmail("");
+    setAsunto("");
+    setMensaje("");
+  };
   return (
     <>
       <WrapperBlue titulo="Contacto" />
@@ -27,21 +44,40 @@ const Contacto = () => {
                     className="nombre-email"
                     type="text"
                     placeholder="Nombre"
+                    value={nombre}
+                    onChange={(e) => setNombre(e.target.value)}
                   />
                   <input
                     className="nombre-email"
                     type="email"
                     placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
-                  <input className="asunto" type="text" placeholder="Asunto" />
+                  <input
+                    className="asunto"
+                    type="text"
+                    placeholder="Asunto"
+                    value={asunto}
+                    onChange={(e) => setAsunto(e.target.value)}
+                  />
                 </div>
                 <div className="form-group">
-                  <textarea type="text" placeholder="Mensaje..." />
+                  <textarea
+                    type="text"
+                    placeholder="Mensaje..."
+                    value={mensaje}
+                    onChange={(e) => setMensaje(e.target.value)}
+                  />
                 </div>
                 <div className="form-group">
-                  <button type="submit" className="leer-mas">
+                  <button
+                    type="submit"
+                    className="leer-mas"
+                    onClick={sendMessage}
+                  >
                     Enviar
                   </button>
                 </div>

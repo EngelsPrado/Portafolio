@@ -5,11 +5,11 @@ export default function About() {
   //Inicializo
   AOS.init();
   return (
-    <section class="container sobre-mi-index">
-      <div class="row wrapper-sobreMi" data-aos="fade-up">
-        <div class="col-12 order-1 order-lg-0 col-lg-6 info-sobreMi">
-          <h3 class="titulos-index">Conoceme...</h3>
-          <p class="parrafo">
+    <section className="container sobre-mi-index">
+      <div className="row wrapper-sobreMi" data-aos="fade-up">
+        <div className="col-12 order-1 order-lg-0 col-lg-6 info-sobreMi">
+          <h3 className="titulos-index">Conoceme...</h3>
+          <p className="parrafo">
             Me llamo Engels Prado Herrera, y me encanta desarrollar webs. Desde
             hace más de 3 años ayudo a negocios y pequeñas empresas a captar
             clientes en internet mediante la creación de una web profesional que
@@ -18,14 +18,14 @@ export default function About() {
             medida, adaptando al presupuesto tope que se me plantee e intentando
             orientarlas a la consecución de beneficios.
           </p>
-          <a href="#" class="leer-mas">
+          <a href="#" className="leer-mas">
             Leer mas...
           </a>
         </div>
-        <figure class="col-12 order-0 order-lg-1 col-lg-6 img-sobreMi">
+        <figure className="col-12 order-0 order-lg-1 col-lg-6 img-sobreMi">
           <img
             loading="lazy"
-            class="img-fluid"
+            className="img-fluid"
             src="static/img/IMG_20190418_164907.jpg"
             width="300px"
             alt="Mirco Martin Desarrollador Web"

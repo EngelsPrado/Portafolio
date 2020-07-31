@@ -7,6 +7,16 @@
   outline: none;
   -webkit-appearance: none;
 }
+.alert {
+  margin-top: 5px;
+  background-color: #bcd8f5;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  p {
+    color: #4da0f8;
+  }
+}
 
 figure {
   margin: 0;

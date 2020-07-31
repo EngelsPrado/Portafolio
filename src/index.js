@@ -3,12 +3,7 @@ import ReactDOM from "react-dom";
 import "./Styles/style.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import {
-  FirebaseAppProvider,
-  useFirestoreDocData,
-  useFirestore,
-  SuspenseWithPerf,
-} from "reactfire";
+import { FirebaseAppProvider } from "reactfire";
 import firebaseConfig from "./Firebase/firebaseConfig";
 
 ReactDOM.render(

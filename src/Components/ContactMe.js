@@ -10,7 +10,7 @@ export default function ContactMe() {
   const [email, setEmail] = useState("");
   const [asunto, setAsunto] = useState("");
   const [mensaje, setMensaje] = useState("");
-
+  const [alert, setAlert] = useState(false);
   const sendMessage = (e) => {
     e.preventDefault();
 
@@ -19,6 +19,10 @@ export default function ContactMe() {
     setEmail("");
     setAsunto("");
     setMensaje("");
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 2000);
   };
   return (
     <div>
@@ -50,7 +54,7 @@ export default function ContactMe() {
             <form action="">
               <div className="form-group row">
                 <div className="col-12 col-lg-6 form-nombre-email">
-                  <label for="nombre">
+                  <label htmlFor="nombre">
                     <i className="icon-user"></i>
                   </label>
                   <input
@@ -63,7 +67,7 @@ export default function ContactMe() {
                   />
                 </div>
                 <div className="col-12 col-lg-6 form-nombre-email">
-                  <label for="email">
+                  <label htmlFor="email">
                     <i className="icon-mail"></i>
                   </label>
                   <input
@@ -78,7 +82,7 @@ export default function ContactMe() {
               </div>
               <div className="form-group row">
                 <div className="col-12 form-asunto">
-                  <label for="asunto">
+                  <label htmlFor="asunto">
                     <i className="icon-pencil"></i>
                   </label>
                   <input
@@ -110,6 +114,11 @@ export default function ContactMe() {
               </div>
             </form>
           </div>
+          {alert && (
+            <div data-aos="fade-up" class="alert alert-primary" role="alert">
+              <p>Pronto me pondre en contacto contigo!</p>
+            </div>
+          )}
         </div>
       </section>
     </div>

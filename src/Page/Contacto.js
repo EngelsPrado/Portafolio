@@ -12,7 +12,7 @@ const Contacto = () => {
   const firebaseApp = useFirebaseApp(); //Sólo funciona en componentes dentro de FirebaseAppProvider
 
   const messages = firebaseApp.firestore().collection("Messages");
-
+  const [alert, setAlert] = useState(false);
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [asunto, setAsunto] = useState("");
@@ -26,6 +26,10 @@ const Contacto = () => {
     setEmail("");
     setAsunto("");
     setMensaje("");
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 2000);
   };
   return (
     <>
@@ -119,6 +123,11 @@ const Contacto = () => {
                 </a>
               </section>
             </div>
+            {alert && (
+              <div data-aos="fade-up" class="alert alert-primary" role="alert">
+                <p>Pronto me pondre en contacto contigo!</p>
+              </div>
+            )}
           </div>
           <div className="row mt-5" data-aos="fade-up">
             <div className="col-12">

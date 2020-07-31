@@ -6,41 +6,41 @@ export default function Elegirme() {
   return (
     <div>
       <Fragment>
-        <div class="wrapper-red ">
-          <section class="container elegirme">
-            <div class="row align-items-center" data-aos="fade-up">
-              <div class="col-12">
-                <h3 class="titulos-index">Por que Elegirme?</h3>
+        <div className="wrapper-red ">
+          <section className="container elegirme">
+            <div className="row align-items-center" data-aos="fade-up">
+              <div className="col-12">
+                <h3 className="titulos-index">Por que Elegirme?</h3>
               </div>
-              <div class="col-12 col-lg-6 order-1 order-lg-0 ">
-                <div class="row align-items-center elegirme-info">
-                  <figure class="col-auto info-icono">
-                    <i class="icon-code"></i>
+              <div className="col-12 col-lg-6 order-1 order-lg-0 ">
+                <div className="row align-items-center elegirme-info">
+                  <figure className="col-auto info-icono">
+                    <i className="icon-code"></i>
                   </figure>
-                  <article class="col-9 info-body">
-                    <h4 class="titulos-h4">Codigo Limpio</h4>
+                  <article className="col-9 info-body">
+                    <h4 className="titulos-h4">Codigo Limpio</h4>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       Nobis, expedita sed reprehenderit delectus ex officia quos
                       praesentium eos odio molestiae.
                     </p>
                   </article>
-                  <figure class="col-auto info-icono">
-                    <i class="icon-share"></i>
+                  <figure className="col-auto info-icono">
+                    <i className="icon-share"></i>
                   </figure>
-                  <article class="col-9 info-body">
-                    <h4 class="titulos-h4">Branding</h4>
+                  <article className="col-9 info-body">
+                    <h4 className="titulos-h4">Branding</h4>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       Nobis, expedita sed reprehenderit delectus ex officia quos
                       praesentium eos odio molestiae.
                     </p>
                   </article>
-                  <figure class="col-auto info-icono">
-                    <i class="icon-smile"></i>
+                  <figure className="col-auto info-icono">
+                    <i className="icon-smile"></i>
                   </figure>
-                  <article class="col-9 info-body">
-                    <h4 class="titulos-h4">Soporte Ilimitado</h4>
+                  <article className="col-9 info-body">
+                    <h4 className="titulos-h4">Soporte Ilimitado</h4>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       Nobis, expedita sed reprehenderit delectus ex officia quos
@@ -49,10 +49,10 @@ export default function Elegirme() {
                   </article>
                 </div>
               </div>
-              <figure class="col-12 col-lg-6 order-0 order-lg-1 elegirme-img">
+              <figure className="col-12 col-lg-6 order-0 order-lg-1 elegirme-img">
                 <img
                   loading="lazy"
-                  class="img-fluid"
+                  className="img-fluid"
                   src="static/img/elegirme.jpg"
                   alt="Mirco Martin Front-End Developer"
                 />
@@ -61,10 +61,10 @@ export default function Elegirme() {
           </section>
         </div>
 
-        <section class="parallax-trabajemos-juntos">
-          <div class="container">
-            <div class="row" data-aos="fade-up">
-              <div class="col-12">
+        <section className="parallax-trabajemos-juntos">
+          <div className="container">
+            <div className="row" data-aos="fade-up">
+              <div className="col-12">
                 <h3>Trabajemos Juntos!</h3>
                 <p>Estoy disponible para proyectos freelance.</p>
               </div>

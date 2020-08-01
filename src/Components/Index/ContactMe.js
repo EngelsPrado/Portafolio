@@ -1,4 +1,5 @@
 import React from 'react';
+import { useForm } from '../../hooks/useForm';
 
 //Aos Bblioteca JS
 import AOS from 'aos';
@@ -7,6 +8,15 @@ import 'aos/dist/aos.css';
 export default function ContactMe() {
 	//Inicializo
 	AOS.init();
+
+	const [formvalues, handleInputChange] = useForm({
+		nombre: '',
+		email: '',
+		asunto: '',
+		mensaje: '',
+	})
+
+	const { nombre, email, asunto, mensaje } = formvalues;
 
 	return (
 		<section className="container contacto-index" id="contacto">
@@ -42,6 +52,8 @@ export default function ContactMe() {
 									placeholder="Nombre"
 									id="nombre"
 									type="text"
+									value={nombre}
+									onChange={handleInputChange}
 								/>
 							</div>
 							<div className="col-12 col-lg-6 form-nombre-email">
@@ -53,6 +65,8 @@ export default function ContactMe() {
 									placeholder="Email"
 									id="email"
 									type="email"
+									value={email}
+									onChange={handleInputChange}
 								/>
 							</div>
 						</div>
@@ -61,12 +75,20 @@ export default function ContactMe() {
 								<label htmlFor="asunto">
 									<i className="icon-pencil" />
 								</label>
-								<input placeholder="Asunto" id="asunto" type="text" />
+								<input placeholder="Asunto" id="asunto" type="text"
+									name="asunto"
+									value={asunto}
+									onChange={handleInputChange}
+								/>
 							</div>
 						</div>
 						<div className="form-group row">
 							<div className="col-12">
-								<textarea placeholder="Dejame tu mensaje..." />
+								<textarea placeholder="Dejame tu mensaje..." 
+								name="mensaje"
+								value={mensaje}
+								onChange={handleInputChange}
+								/>
 							</div>
 							<div className="col-12">
 								<button type="submit" className="boton-enviar">

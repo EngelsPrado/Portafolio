@@ -1,15 +1,38 @@
 import React from 'react';
 
 import WrapperBlue from '../Components/WrapperBlue';
+import { useForm } from '../hooks/useForm';
 
 //Aos Bblioteca JS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+//Firestore
+import { useFirebaseApp } from 'reactfire';
+import 'firebase/firestore'
+
 const Contacto = () => {
 	//Inicializo
 	AOS.init();
 
+	const firebaseapp = useFirebaseApp()
+	const msg = firebaseapp.firestore().collection('msg')
+
+	const [formvalues, handleInputChange] = useForm({
+		nombre: '',
+		email: '',
+		asunto: '',
+		mensaje: '',
+	})
+
+	const handleSubmitContact = (e) => {
+		e.preventDefault();
+
+		msg.add({formvalues});
+		console.log(formvalues)
+	}
+	const { nombre, email, asunto, mensaje } = formvalues;
+	
 	return (
 		<>
 			<WrapperBlue titulo="Contacto" />
@@ -27,11 +50,17 @@ const Contacto = () => {
 										className="nombre-email"
 										type="text"
 										placeholder="Nombre"
+										name="nombre"
+										value={nombre || "" }
+										onChange={handleInputChange}
 									/>
 									<input
 										className="nombre-email"
 										type="email"
 										placeholder="Email"
+										name="email"
+										value={email || ""}
+										onChange={handleInputChange}
 									/>
 								</div>
 								<div className="form-group">
@@ -39,13 +68,20 @@ const Contacto = () => {
 										className="asunto"
 										type="text"
 										placeholder="Asunto"
+										name="asunto"
+										value={asunto || "" }
+										onChange={handleInputChange}
 									/>
 								</div>
 								<div className="form-group">
-									<textarea type="text" placeholder="Mensaje..." />
+									<textarea type="text" placeholder="Mensaje..." 
+										name="mensaje"
+										value={mensaje || ""}
+										onChange={handleInputChange}
+									/>
 								</div>
 								<div className="form-group">
-									<button type="submit" className="leer-mas">
+									<button type="submit" className="leer-mas" onClick={handleSubmitContact}>
 										Enviar
 									</button>
 								</div>

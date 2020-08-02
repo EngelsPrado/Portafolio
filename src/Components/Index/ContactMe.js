@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import { useForm } from '../../hooks/useForm';
 import { validacion } from '../SubComponents/Validacion';
@@ -36,23 +36,25 @@ export default function ContactMe() {
 
 	const { nombre, email, asunto, mensaje } = formvalues;
 
-	const handleSubmitContact = (e) => {
-		e.preventDefault();
-		
-		validacion(formvalues, setError)
+	const handleSubmitContact = () => {
 
-		//Compruebo la validacion
+		validacion(formvalues, setError);
+
 		if (error === '') {
 			
-			msg.add({ formvalues });
-			//Msg Exito
-			Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+			const noError = error === ''
+
+			if(noError){
+				//Compruebo la validacion
+				msg.add({ formvalues });
+				//Msg Exito
+				Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+			}
 			
-			
-		}else{
-			return
+		} else {
+
+			return false
 		}
-		
 	};
 
 	return (
@@ -78,7 +80,7 @@ export default function ContactMe() {
 					></iframe>
 				</div>
 				<div className="col-12 col-lg-6 formulario">
-					<form onSubmit={handleSubmitContact}>
+					<form >
 						<div className="form-group row">
 							<div className="col-12 col-lg-6 form-nombre-email">
 								<label htmlFor="nombre">
@@ -132,14 +134,13 @@ export default function ContactMe() {
 								/>
 							</div>
 							<div className="col-12">
-								<button type="submit" className="boton-enviar">
+								<button type="button" onClick={() => handleSubmitContact(error)} className="boton-enviar">
 									Enviar
 								</button>
 							</div>
 						</div>
 
 						{error ? <Error error={error} /> : null}
-
 					</form>
 				</div>
 			</div>

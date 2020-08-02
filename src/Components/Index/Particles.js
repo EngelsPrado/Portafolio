@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Particulas from './SubComponentsIndex/Particulas';
+import Particulas from './../SubComponents/Particulas';
 
 //Libreria TypeJs
 import Typed from 'react-typed';

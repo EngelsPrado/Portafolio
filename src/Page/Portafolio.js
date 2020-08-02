@@ -7,7 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 //Carousel
-import Carousel from './../Components/Index/SubComponentsIndex/Carousel';
+import Carousel from './../Components/SubComponents/Carousel';
 
 const Portafolio = () => {
 	//Inicializo

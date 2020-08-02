@@ -1,8 +1,8 @@
 import React from 'react';
 
 import WrapperBlue from '../Components/WrapperBlue';
-import Servicio from '../Components/Index/SubComponentsIndex/Servicio';
-import Planes from '../Components/Index/SubComponentsIndex/Planes';
+import Servicio from '../Components/SubComponents/Servicio';
+import Planes from '../Components/SubComponents/Planes';
 
 //Aos Bblioteca JS
 import AOS from 'aos';

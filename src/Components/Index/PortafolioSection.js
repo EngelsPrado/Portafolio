@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {proyectos} from './SubComponentsIndex/Data';
-import Proyecto from './SubComponentsIndex/Proyecto';
+import {proyectos} from './../SubComponents/Data';
+import Proyecto from './../SubComponents/Proyecto';
 
 export default function PortafolioSection() {
 	return (

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { navigate } from '@reach/router';
 
-import Error from './../Components/Index/SubComponentsIndex/Error';
+import { expresiones, errores } from '../Components/SubComponents/Data';
+import Error from '../Components/SubComponents/Error';
 import WrapperBlue from '../Components/WrapperBlue';
 import { useForm } from '../hooks/useForm';
+
+//Alerta de confirmacion de envio
 import Swal from 'sweetalert2';
-import {
-	expresiones,
-	errores,
-} from './../Components/Index/SubComponentsIndex/Data';
 
 //Aos Bblioteca JS
 import AOS from 'aos';
@@ -89,7 +88,7 @@ const Contacto = () => {
 						data-aos="fade-up"
 					>
 						<div className="col-12 col-md-6 order-1 order-md-0">
-							<form onSubmit={handleSubmitContact}>
+							<form onSubmit={handleSubmitContact} noValidate>
 								<div className="form-group d-flex justify-content-between">
 									<input
 										className="nombre-email"
@@ -136,6 +135,7 @@ const Contacto = () => {
 							</form>
 
 							{error ? <Error error={error} /> : null}
+							
 						</div>
 						<div className="col-12 col-md-5 mb-4 mb-md-0 order-0 order-lg-1 body-contacto">
 							<h4 className="titulos-index">

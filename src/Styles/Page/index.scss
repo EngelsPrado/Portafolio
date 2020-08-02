@@ -200,6 +200,7 @@
 		}
 	}
 	.formulario {
+		color: $texto;
 		.form-group {
 			margin-bottom: 20px;
 			input,
@@ -208,6 +209,7 @@
 				width: 100%;
 				padding: 5px;
 				line-height: 1.15px;
+				color: $texto;
 			}
 			textarea {
 				padding: 15px;

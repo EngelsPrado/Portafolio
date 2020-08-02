@@ -1,13 +1,23 @@
 import React from 'react';
+
 import { useForm } from '../../hooks/useForm';
+import Swal from 'sweetalert2'
 
 //Aos Bblioteca JS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+//Firestore
+import { useFirebaseApp } from 'reactfire';
+import 'firebase/firestore'
+
 export default function ContactMe() {
 	//Inicializo
 	AOS.init();
+
+	//Inicializo Firebase
+	const firebaseapp = useFirebaseApp()
+	const msg = firebaseapp.firestore().collection('msg')
 
 	const [formvalues, handleInputChange] = useForm({
 		nombre: '',
@@ -17,6 +27,20 @@ export default function ContactMe() {
 	})
 
 	const { nombre, email, asunto, mensaje } = formvalues;
+
+	const handleSubmitContact = (e) => {
+		e.preventDefault();
+
+		//submit a firestore
+		msg.add({formvalues});
+
+		//Msg Exito
+		Swal.fire(
+			'Buen Trabajo!',
+			'La consulta fue enviada!',
+			'success'
+		)
+	}
 
 	return (
 		<section className="container contacto-index" id="contacto">
@@ -41,7 +65,7 @@ export default function ContactMe() {
 					></iframe>
 				</div>
 				<div className="col-12 col-lg-6 formulario">
-					<form>
+					<form onSubmit={handleSubmitContact}>
 						<div className="form-group row">
 							<div className="col-12 col-lg-6 form-nombre-email">
 								<label htmlFor="nombre">
@@ -52,7 +76,7 @@ export default function ContactMe() {
 									placeholder="Nombre"
 									id="nombre"
 									type="text"
-									value={nombre}
+									value={nombre || ""}
 									onChange={handleInputChange}
 								/>
 							</div>
@@ -65,7 +89,7 @@ export default function ContactMe() {
 									placeholder="Email"
 									id="email"
 									type="email"
-									value={email}
+									value={email || ""}
 									onChange={handleInputChange}
 								/>
 							</div>
@@ -77,7 +101,7 @@ export default function ContactMe() {
 								</label>
 								<input placeholder="Asunto" id="asunto" type="text"
 									name="asunto"
-									value={asunto}
+									value={asunto || ""}
 									onChange={handleInputChange}
 								/>
 							</div>
@@ -86,7 +110,7 @@ export default function ContactMe() {
 							<div className="col-12">
 								<textarea placeholder="Dejame tu mensaje..." 
 								name="mensaje"
-								value={mensaje}
+								value={mensaje || ""}
 								onChange={handleInputChange}
 								/>
 							</div>

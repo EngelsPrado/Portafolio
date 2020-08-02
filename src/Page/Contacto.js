@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { navigate } from '@reach/router';
 
+import Error from './../Components/Index/SubComponentsIndex/Error';
 import WrapperBlue from '../Components/WrapperBlue';
 import { useForm } from '../hooks/useForm';
+import Swal from 'sweetalert2';
+import {
+	expresiones,
+	errores,
+} from './../Components/Index/SubComponentsIndex/Data';
 
 //Aos Bblioteca JS
 import AOS from 'aos';
@@ -9,30 +16,68 @@ import 'aos/dist/aos.css';
 
 //Firestore
 import { useFirebaseApp } from 'reactfire';
-import 'firebase/firestore'
+import 'firebase/firestore';
 
 const Contacto = () => {
 	//Inicializo
 	AOS.init();
 
-	const firebaseapp = useFirebaseApp()
-	const msg = firebaseapp.firestore().collection('msg')
+	//Inicializo Firebase
+	const firebaseapp = useFirebaseApp();
+	const msg = firebaseapp.firestore().collection('msg');
 
+	//Error State
+	const [error, setError] = useState('');
 	const [formvalues, handleInputChange] = useForm({
 		nombre: '',
 		email: '',
 		asunto: '',
 		mensaje: '',
-	})
+	});
+
+	const { nombre, email, asunto, mensaje } = formvalues;
 
 	const handleSubmitContact = (e) => {
 		e.preventDefault();
 
-		msg.add({formvalues});
-		console.log(formvalues)
-	}
-	const { nombre, email, asunto, mensaje } = formvalues;
-	
+		if (!nombre) {
+			setError(errores.erroresNombreUno);
+			return;
+		} else if (!expresiones.nombre.test(nombre)) {
+			setError(errores.erroresNombreDos);
+			return;
+		}
+
+		if (!email) {
+			setError(errores.erroresEmailUno);
+			return;
+		} else if (!expresiones.correo.test(email)) {
+			setError(errores.erroresEmailDos);
+			return;
+		}
+
+		if (!asunto) {
+			setError(errores.erroresAsuntoUno);
+			return;
+		}
+
+		if (!mensaje) {
+			setError(errores.erroresMensajeUno);
+			return;
+		}
+
+		//submit a firestore
+		msg.add({ formvalues });
+
+		//Msg Exito
+		Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+
+		setTimeout(() => {
+			//Redirecciono a index
+			navigate('/');
+		}, 2000);
+	};
+
 	return (
 		<>
 			<WrapperBlue titulo="Contacto" />
@@ -44,22 +89,23 @@ const Contacto = () => {
 						data-aos="fade-up"
 					>
 						<div className="col-12 col-md-6 order-1 order-md-0">
-							<form>
+							<form onSubmit={handleSubmitContact}>
 								<div className="form-group d-flex justify-content-between">
 									<input
 										className="nombre-email"
 										type="text"
 										placeholder="Nombre"
 										name="nombre"
-										value={nombre || "" }
+										value={nombre || ''}
 										onChange={handleInputChange}
 									/>
+
 									<input
 										className="nombre-email"
 										type="email"
 										placeholder="Email"
 										name="email"
-										value={email || ""}
+										value={email || ''}
 										onChange={handleInputChange}
 									/>
 								</div>
@@ -69,33 +115,38 @@ const Contacto = () => {
 										type="text"
 										placeholder="Asunto"
 										name="asunto"
-										value={asunto || "" }
+										value={asunto || ''}
 										onChange={handleInputChange}
 									/>
 								</div>
 								<div className="form-group">
-									<textarea type="text" placeholder="Mensaje..." 
+									<textarea
+										type="text"
+										placeholder="Mensaje..."
 										name="mensaje"
-										value={mensaje || ""}
+										value={mensaje || ''}
 										onChange={handleInputChange}
 									/>
 								</div>
 								<div className="form-group">
-									<button type="submit" className="leer-mas" onClick={handleSubmitContact}>
+									<button type="submit" className="leer-mas">
 										Enviar
 									</button>
 								</div>
 							</form>
+
+							{error ? <Error error={error} /> : null}
 						</div>
 						<div className="col-12 col-md-5 mb-4 mb-md-0 order-0 order-lg-1 body-contacto">
 							<h4 className="titulos-index">
 								No dudes en enviarme tu consulta!
 							</h4>
 							<p>
-								Envíame tus requisitos para un sitio web, investigaremos
-								sus especificaciones y competidores, crearemos un
-								prototipo del sitio web de forma gratuita y le enviaremos
-								un resultado.
+								Envíame tus requisitos para un sitio web,
+								investigaremos sus especificaciones y
+								competidores, crearemos un prototipo del sitio
+								web de forma gratuita y le enviaremos un
+								resultado.
 							</p>
 							<section className="redes-general d-flex justify-content-center justify-content-md-start">
 								<a

@@ -62,6 +62,7 @@ $(function () {
     icono = $("#btn-menu .icono");
 
   if (ancho <= 768) {
+    console.log("test");
     enlaces.hide();
     //enlacesLI.show(); ADEMAS EN CSS AGREGAR AL LI DISPLAY NONE
     icono.addClass("icon-menu");

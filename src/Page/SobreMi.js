@@ -20,7 +20,7 @@ const SobreMi = () => {
             <figure className="col-lg-4 d-none d-lg-block">
               <img
                 className="img-fluid"
-                src="static/img/IMG_-ccc10v.jpg"
+                src="static/img/IMG_-ccc10v.webp"
                 alt="Mirco Martin Front End"
               />
             </figure>

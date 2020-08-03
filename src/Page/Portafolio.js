@@ -21,10 +21,7 @@ const Portafolio = () => {
               <div className="carousel__contenedor">
                 <GliderComponent hasArrows={true} hasDots={true}>
                   <div className="carousel__elemento">
-                    <img
-                      src="static/img/chat1.png"
-                      alt="Licenciada Mariel Leone"
-                    />
+                    <img src="static/img/chat1.webp" alt="SR" />
                   </div>
                   <div className="carousel__elemento">
                     <img

@@ -47,7 +47,7 @@ export default function PortafolioSection() {
               <img
                 loading="lazy"
                 className="img-fluid"
-                src="static/img/pasteleria.jpg"
+                src="static/img/pasteleria.webp"
                 alt="Pasteleria Artesanal"
               />
               <figcaption className="overlay">
@@ -64,7 +64,7 @@ export default function PortafolioSection() {
               <img
                 loading="lazy"
                 className="img-fluid"
-                src="static/img/pasteleria.jpg"
+                src="static/img/pasteleria.webp"
                 alt="Pasteleria Artesanal"
               />
               <figcaption className="overlay">
@@ -81,7 +81,7 @@ export default function PortafolioSection() {
               <img
                 loading="lazy"
                 className="img-fluid"
-                src="static/img/pasteleria.jpg"
+                src="static/img/pasteleria.webp"
                 alt="Pasteleria Artesanal"
               />
               <figcaption className="overlay">
@@ -98,7 +98,7 @@ export default function PortafolioSection() {
               <img
                 loading="lazy"
                 className="img-fluid"
-                src="static/img/pasteleria.jpg"
+                src="static/img/pasteleria.webp"
                 alt="Pasteleria Artesanal"
               />
               <figcaption className="overlay">

@@ -1,27 +1,29 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 
-import Footer from "./Components/Footer";
-import Contacto from "./Page/Contacto";
-import SobreMi from "./Page/SobreMi";
-import Header from "./Components/Header";
-import Servicios from "./Page/Servicios";
-import Portafolio from "./Page/Portafolio";
-import Index from "./Page/Index";
 import { Router } from "@reach/router";
+
+const SobreMi = lazy(() => import("./Page/SobreMi"));
+const Footer = lazy(() => import("./Components/Footer"));
+const Contacto = lazy(() => import("./Page/Contacto"));
+const Header = lazy(() => import("./Components/Header"));
+const Servicios = lazy(() => import("./Page/Servicios"));
+const Portafolio = lazy(() => import("./Page/Portafolio"));
+const Index = lazy(() => import("./Page/Index"));
 
 function App() {
   return (
     <>
-      <Header />
-
-      <Router>
-        <Index path="/" />
-        <Contacto path="/contacto" />
-        <SobreMi path="/sobremi" />
-        <Servicios path="/servicios" />
-        <Portafolio path="/portafolio" />
-      </Router>
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Router>
+          <Index path="/" />
+          <Contacto path="/contacto" />
+          <SobreMi path="/sobremi" />
+          <Servicios path="/servicios" />
+          <Portafolio path="/portafolio" />
+        </Router>
+        <Footer />
+      </Suspense>
     </>
   );
 }

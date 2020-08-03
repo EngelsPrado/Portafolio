@@ -1,22 +1,24 @@
-import React from "react";
-import Particle from "./Index/Particles";
-import About from "../Components/About";
-import Services from "../Components/Services";
-import PortafolioSection from "../Components/PortafolioSection";
-import Elegirme from "../Components/Elegirme";
-import ContactMe from "../Components/ContactMe";
+import React, { lazy, Suspense } from "react";
 
+const Particle = lazy(() => import("./Index/Particles"));
+const About = lazy(() => import("../Components/About"));
+const Services = lazy(() => import("../Components/Services"));
+const PortafolioSection = lazy(() => import("../Components/PortafolioSection"));
+const Elegirme = lazy(() => import("../Components/Elegirme"));
+const ContactMe = lazy(() => import("../Components/ContactMe"));
 const Index = () => {
   return (
     <>
-      <Particle />
-      <main>
-        <About />
-        <Services />
-        <PortafolioSection />
-        <Elegirme />
-        <ContactMe />
-      </main>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Particle />
+        <main>
+          <About />
+          <Services />
+          <PortafolioSection />
+          <Elegirme />
+          <ContactMe />
+        </main>
+      </Suspense>
     </>
   );
 };

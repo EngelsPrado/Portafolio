@@ -26,7 +26,7 @@ export default function About() {
           <img
             loading="lazy"
             className="img-fluid"
-            src="static/img/IMG_20190418_164907.jpg"
+            src="static/img/IMG_20190418_164907.webp"
             width="300px"
             alt="Mirco Martin Desarrollador Web"
           />

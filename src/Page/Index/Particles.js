@@ -34,7 +34,7 @@ const Particle = () => {
         }}
         style={{
           width: "100%",
-          backgroundImage: `url(/static/img/parallax.jpg)`,
+          backgroundImage: `url(/static/img/parallax.webp)`,
         }}
       />
       <div className="info">

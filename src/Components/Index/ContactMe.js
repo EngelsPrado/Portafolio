@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useForm } from '../../hooks/useForm';
-import { validacion } from '../SubComponents/Validacion';
+import { expresiones, errores } from '../SubComponents/Data';
 import Error from '../SubComponents/Error';
 
 //Alerta de confirmacion de envio
@@ -11,23 +11,18 @@ import Swal from 'sweetalert2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-//Firestore
-import { useFirebaseApp } from 'reactfire';
-import 'firebase/firestore';
+//Firebase
+import { db } from '../../Firebase/firebase-config';
 
 export default function ContactMe() {
 	//Inicializo
 	AOS.init();
 
-	//Inicializo Firebase
-	const firebaseapp = useFirebaseApp();
-	const msg = firebaseapp.firestore().collection('msg');
-
 	//Error State
 	const [error, setError] = useState('');
 
 	//State Hook
-	const [formvalues, handleInputChange] = useForm({
+	const [formvalues, handleInputChange, reset] = useForm({
 		nombre: '',
 		email: '',
 		asunto: '',
@@ -36,25 +31,43 @@ export default function ContactMe() {
 
 	const { nombre, email, asunto, mensaje } = formvalues;
 
-	const handleSubmitContact = () => {
+	const handleSubmitContact = async (e) => {
+		e.preventDefault();
 
-		validacion(formvalues, setError);
-
-		if (error === '') {
-			
-			const noError = error === ''
-
-			if(noError){
-				//Compruebo la validacion
-				msg.add({ formvalues });
-				//Msg Exito
-				Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
-			}
-			
-		} else {
-
-			return false
+		if (!nombre) {
+			setError(errores.erroresNombreUno);
+			return;
+		} else if (!expresiones.nombre.test(nombre)) {
+			setError(errores.erroresNombreDos);
+			return;
 		}
+
+		if (!email) {
+			setError(errores.erroresEmailUno);
+			return;
+		} else if (!expresiones.correo.test(email)) {
+			setError(errores.erroresEmailDos);
+			return;
+		}
+
+		if (!asunto) {
+			setError(errores.erroresAsuntoUno);
+			return;
+		}
+
+		if (!mensaje) {
+			setError(errores.erroresMensajeUno);
+			return;
+		}
+
+		//submit a firestore
+		await db.collection("Mails").add(formvalues);
+
+		//Msg Exito
+		Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+
+		//Reset
+		reset();
 	};
 
 	return (
@@ -68,10 +81,10 @@ export default function ContactMe() {
 						<i className="icon-location"></i> Rosario, Santa Fe
 					</p>
 					<p>
-						<i className="icon-mail"></i> consultas@mmdiseños.com.ar
+						<i className="icon-mail"></i> consultas@mmdisenos.com.ar
 					</p>
 					<p>
-						<i className="icon-whatsapp"></i> 3415 486863
+						<i className="icon-whatsapp"></i> +54 9 341 229-2496
 					</p>
 					<iframe
 						title="Ubicacion"
@@ -80,7 +93,7 @@ export default function ContactMe() {
 					></iframe>
 				</div>
 				<div className="col-12 col-lg-6 formulario">
-					<form >
+					<form onSubmit={handleSubmitContact}>
 						<div className="form-group row">
 							<div className="col-12 col-lg-6 form-nombre-email">
 								<label htmlFor="nombre">
@@ -134,7 +147,7 @@ export default function ContactMe() {
 								/>
 							</div>
 							<div className="col-12">
-								<button type="button" onClick={() => handleSubmitContact(error)} className="boton-enviar">
+								<button type="submit" className="boton-enviar">
 									Enviar
 								</button>
 							</div>

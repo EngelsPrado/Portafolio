@@ -8,6 +8,7 @@ import Header from './Components/Header';
 import Servicios from './Page/Servicios';
 import Portafolio from './Page/Portafolio';
 import Index from './Page/Index';
+import { Blog } from './Page/Blog';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<SobreMi path="/sobremi" />
 				<Servicios path="/servicios" />
 				<Portafolio path="/portafolio" />
+				<Blog path="/blog" />
 			</Router>
 			<Footer />
 		</>

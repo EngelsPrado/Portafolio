@@ -5,15 +5,7 @@ import ReactDOM from 'react-dom';
 import './Styles/style.scss';
 import App from './App';
 
-//Firebase
-import { FirebaseAppProvider } from 'reactfire';
-import firebaseConfig from './Firebase/config';
-
 ReactDOM.render(
-	<React.StrictMode>
-		<FirebaseAppProvider firebaseConfig={firebaseConfig}>
-			<App />
-		</FirebaseAppProvider>
-	</React.StrictMode>,
+	<App />,
 	document.getElementById('root'),
 );

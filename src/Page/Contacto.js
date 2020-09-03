@@ -13,17 +13,12 @@ import Swal from 'sweetalert2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-//Firestore
-import { useFirebaseApp } from 'reactfire';
-import 'firebase/firestore';
+//Firebase
+import { db } from '../Firebase/firebase-config';
 
 const Contacto = () => {
 	//Inicializo
 	AOS.init();
-
-	//Inicializo Firebase
-	const firebaseapp = useFirebaseApp();
-	const msg = firebaseapp.firestore().collection('msg');
 
 	//Error State
 	const [error, setError] = useState('');
@@ -36,7 +31,7 @@ const Contacto = () => {
 
 	const { nombre, email, asunto, mensaje } = formvalues;
 
-	const handleSubmitContact = (e) => {
+	const handleSubmitContact = async (e) => {
 		e.preventDefault();
 
 		if (!nombre) {
@@ -66,7 +61,7 @@ const Contacto = () => {
 		}
 
 		//submit a firestore
-		msg.add({ formvalues });
+		await db.collection("Mails").add(formvalues);
 
 		//Msg Exito
 		Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');

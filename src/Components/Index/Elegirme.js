@@ -24,10 +24,10 @@ export default function Elegirme() {
 								<article className="col-9 info-body">
 									<h4 className="titulos-h4">Codigo Limpio</h4>
 									<p>
-										Lorem ipsum dolor sit, amet consectetur
-										adipisicing elit. Nobis, expedita sed
-										reprehenderit delectus ex officia quos praesentium
-										eos odio molestiae.
+										Diseño y desarrollo de páginas webs corporativas y
+										profesionales. Diseñadas especialmente para ti,
+										funcionales y de calidad. Con la tecnología SEO
+										para mejorar el posicionamiento de tu web.
 									</p>
 								</article>
 								<figure className="col-auto info-icono">
@@ -36,10 +36,12 @@ export default function Elegirme() {
 								<article className="col-9 info-body">
 									<h4 className="titulos-h4">Branding</h4>
 									<p>
-										Lorem ipsum dolor sit, amet consectetur
-										adipisicing elit. Nobis, expedita sed
-										reprehenderit delectus ex officia quos praesentium
-										eos odio molestiae.
+										Ofrezco un servicio que integra el diseño en el
+										corazón de la empresa para potenciar su
+										creatividad, orientarla al cliente, alimentar la
+										cadena de valor generando beneficios y una
+										plataforma de reconocimiento que permite
+										incursionar más fácilmente en nuevos negocios.
 									</p>
 								</article>
 								<figure className="col-auto info-icono">
@@ -48,10 +50,10 @@ export default function Elegirme() {
 								<article className="col-9 info-body">
 									<h4 className="titulos-h4">Soporte Ilimitado</h4>
 									<p>
-										Lorem ipsum dolor sit, amet consectetur
-										adipisicing elit. Nobis, expedita sed
-										reprehenderit delectus ex officia quos praesentium
-										eos odio molestiae.
+										Te acompaño durante todo el desarrollo del
+										proyecto ofreciendo todo el asesoramiento,
+										conocimientos y experiencia para ponerte fácil
+										todo el camino.
 									</p>
 								</article>
 							</div>

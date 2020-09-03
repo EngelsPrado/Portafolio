@@ -19,28 +19,25 @@ export default function Services() {
 						<i className="icon-laptop" />
 						<h4 className="titulos-h4">Web Developer</h4>
 						<p className="parrafo">
-							Diagramación profesional de Sitios Web. Programación
-							HTML, CSS, Javascript, React Js, Wordpress. Bases de Datos...
+							Diagramación profesional de Sitios Web. Programación HTML,
+							CSS, Javascript, React Js, Wordpress. Bases de Datos...
 						</p>
 					</article>
 					<article className="col-12 col-lg-4 servicio-individual">
 						<i className="icon-mobile" />
 						<h4 className="titulos-h4">Responsive Design</h4>
 						<p className="parrafo">
-							Con la última tecnología y responsive design que se
-							adaptan a todas las plataformas, logramos una Sitio
-							Web multiplataforma...
+							Con la última tecnología y responsive design que se adaptan a
+							todas las plataformas, logramos una Sitio Web
+							multiplataforma...
 						</p>
 					</article>
 					<article className="ol-12 col-lg-4 servicio-individual">
 						<i className="icon-picture" />
 						<h4 className="titulos-h4">Diseño Grafico</h4>
 						<p className="parrafo">
-							Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Laudantium consequatur, vel nesciunt pariatur
-							itaque at! Dolores vero, similique harum blanditiis
-							veniam dolore cumque adipisci voluptate iure totam
-							asperiores, officiis aspernatur!
+						Implemento sitios gráficamente modernos y funcionales a 
+						los objetivos de cada comitente...
 						</p>
 					</article>
 				</section>

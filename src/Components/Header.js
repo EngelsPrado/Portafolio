@@ -3,6 +3,15 @@ import React from 'react';
 import { Link } from '@reach/router';
 
 const Header = () => {
+	
+	//Menu Responsive
+	const close = () => {
+		if (window.innerWidth <= 768) {
+			const enlace = document.querySelector('#enlaces');
+			enlace.click()
+		}
+	};
+
 	return (
 		<header className="nav-hide" id="header">
 			<nav className="container">
@@ -20,19 +29,34 @@ const Header = () => {
 					</figure>
 					<ul className="menu col-12 col-md-9" id="enlaces">
 						<li>
-							<Link to="/">Inicio</Link>
+							<Link to="/" onClick={close}>
+								Inicio
+							</Link>
 						</li>
 						<li>
-							<Link to="/sobremi">Sobre mi</Link>
+							<Link to="/sobremi" onClick={close}>
+								Sobre mi
+							</Link>
 						</li>
 						<li>
-							<Link to="/servicios">Servicios</Link>
+							<Link to="/servicios" onClick={close}>
+								Servicios
+							</Link>
 						</li>
 						<li>
-							<Link to="/portafolio">Portafolio</Link>
+							<Link to="/portafolio" onClick={close}>
+								Portafolio
+							</Link>
 						</li>
 						<li>
-							<Link to="/contacto">Contacto</Link>
+							<Link to="/blog" onClick={close}>
+								Blog
+							</Link>
+						</li>
+						<li>
+							<Link to="/contacto" onClick={close}>
+								Contacto
+							</Link>
 						</li>
 					</ul>
 					<section className="col-auto redes-sociales d-none d-lg-block">
